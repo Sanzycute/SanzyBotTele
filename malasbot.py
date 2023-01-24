@@ -28,7 +28,7 @@ def banner():
    | |  | | (_| | | (_| \__ \_____| |_) | (_) | |_ 
    |_|  |_|\__,_|_|\__,_|___/     |____/ \___/ \__|
             
-               MalasBot - Bot Telegram
+               Sanzy - Bot Telegram
                
                    Version : 0.2
                      
@@ -582,13 +582,13 @@ keyboard1 = ReplyKeyboardMarkup(resize_keyboard=True, one_time_keyboard=True).ad
 
 @disp.message_handler(commands=['start', 'help'])
 async def start_bot(pesan: types.Message):
-	await pesan.reply('𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗠𝗮𝗹𝗮𝘀𝗕𝗼𝘁, 𝗦𝗲𝗹𝗲𝗰𝘁 𝗠𝗲𝗻𝘂 ❗',reply_markup=keyboard1)
+	await pesan.reply('𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 𝗦𝗮𝗻𝘇𝘆𝗕𝗼𝘁, 𝗦𝗲𝗹𝗲𝗰𝘁 𝗠𝗲𝗻𝘂 ❗',reply_markup=keyboard1)
 
 @disp.message_handler()
 async def keyboard_answer(pesan: types.Message):
-    if pesan.text == '𝗛𝗲𝗹𝗽 𝗕𝗼𝘁 🤖':
+    if pesan.text == '𝗛𝗲𝗹𝗽 𝗕𝗼𝘁 ':
     	await pesan.answer(about_bot())
-    elif pesan.text == '𝗠𝗲𝗻𝘂 𝗕𝗼𝘁🤖':
+    elif pesan.text == '𝗠𝗲𝗻𝘂 𝗕𝗼𝘁':
     	await pesan.answer(menu_bot())
     	
 if __name__ == '__main__':
